@@ -9,6 +9,7 @@ def get_youtube_transcript(url: str) -> str:
     try:
         transcript = YouTubeTranscriptApi.get_transcript(
             video_id,
+            languages=["en"],
             proxies={
                 "http": "http://" + settings.PROXY_URL,
                 "https": "https://" + settings.PROXY_URL,
